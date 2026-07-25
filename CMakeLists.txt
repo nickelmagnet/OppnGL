@@ -4,7 +4,7 @@ project(OppnGL LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
 
 add_executable(OppnGL
 	src/main.cpp
@@ -23,9 +23,5 @@ target_link_directories(OppnGL PRIVATE
 
 target_link_libraries(OppnGL PRIVATE 
     glfw3
-    winmm
-    gdi32
-    opengl32
-    user32
-    shell32
+	opengl32
 )
