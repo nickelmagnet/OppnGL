@@ -1,7 +1,0 @@
-# ninja log v7
-4	57	8066841352362929	CMakeFiles/OppnGL.dir/src/main.cpp.obj.ddi	8de77b61e91f4dc
-59	143	8066841353667748	CMakeFiles/OppnGL.dir/CXX.dd	f321f53ab4aa9e72
-59	143	8066841353667748	CMakeFiles/OppnGL.dir/CXXModules.json	f321f53ab4aa9e72
-59	143	8066841353667748	CMakeFiles/OppnGL.dir/src/main.cpp.obj.modmap	f321f53ab4aa9e72
-146	237	8066841353792818	CMakeFiles/OppnGL.dir/src/main.cpp.obj	734cda7aaa77d9c8
-238	379	8066841354701614	C:/Dev/OppnGL/bin/Release/OppnGL.exe	84984b7d5d753421
