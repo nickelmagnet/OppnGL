@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: OppnGL
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -39,7 +39,7 @@ include CMakeFiles\rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:\Dev\OppnGL\build\x64-debug\
+cmake_ninja_workdir = C$:\Dev\OppnGL\build\x64-release\
 # =============================================================================
 # Object build statements for EXECUTABLE target OppnGL
 
@@ -49,27 +49,27 @@ cmake_ninja_workdir = C$:\Dev\OppnGL\build\x64-debug\
 
 build cmake_object_order_depends_target_OppnGL: phony || .
 
-build CMakeFiles\OppnGL.dir\src\main.cpp.obj.ddi: CXX_SCAN__OppnGL_Debug C$:\Dev\OppnGL\src\main.cpp || cmake_object_order_depends_target_OppnGL
+build CMakeFiles\OppnGL.dir\src\main.cpp.obj.ddi: CXX_SCAN__OppnGL_Release C$:\Dev\OppnGL\src\main.cpp || cmake_object_order_depends_target_OppnGL
   DEP_FILE = CMakeFiles\OppnGL.dir\src\main.cpp.obj.ddi.d
   DYNDEP_INTERMEDIATE_FILE = CMakeFiles\OppnGL.dir\src\main.cpp.obj.ddi
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od -std:c++20 -MDd -RTC1 -Zi
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
   INCLUDES = -IC:\Dev\OppnGL\Dependencies\GLFW\include
   OBJ_FILE = CMakeFiles\OppnGL.dir\src\main.cpp.obj
   PREPROCESSED_OUTPUT_FILE = CMakeFiles\OppnGL.dir\src\main.cpp.obj.ddi.i
 
-build CMakeFiles\OppnGL.dir\src\main.cpp.obj: CXX_COMPILER__OppnGL_scanned_Debug C$:\Dev\OppnGL\src\main.cpp | CMakeFiles\OppnGL.dir\src\main.cpp.obj.modmap || cmake_object_order_depends_target_OppnGL CMakeFiles\OppnGL.dir\CXX.dd
-  CONFIG = Debug
+build CMakeFiles\OppnGL.dir\src\main.cpp.obj: CXX_COMPILER__OppnGL_scanned_Release C$:\Dev\OppnGL\src\main.cpp | CMakeFiles\OppnGL.dir\src\main.cpp.obj.modmap || cmake_object_order_depends_target_OppnGL CMakeFiles\OppnGL.dir\CXX.dd
+  CONFIG = Release
   DYNDEP_MODULE_MAP_FILE = CMakeFiles\OppnGL.dir\src\main.cpp.obj.modmap
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od -std:c++20 -MDd -RTC1 -Zi
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD
   INCLUDES = -IC:\Dev\OppnGL\Dependencies\GLFW\include
   OBJECT_DIR = CMakeFiles\OppnGL.dir
   OBJECT_FILE_DIR = CMakeFiles\OppnGL.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\OppnGL.dir\
-  TARGET_PDB = C:\Dev\OppnGL\bin\Debug\OppnGL.pdb
+  TARGET_PDB = C:\Dev\OppnGL\bin\Release\OppnGL.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\OppnGL.dir
   dyndep = CMakeFiles/OppnGL.dir/CXX.dd
 
-build CMakeFiles\OppnGL.dir\CXX.dd | CMakeFiles\OppnGL.dir\CXXModules.json CMakeFiles\OppnGL.dir\src\main.cpp.obj.modmap: CXX_DYNDEP__OppnGL_Debug CMakeFiles\OppnGL.dir\src\main.cpp.obj.ddi | C$:\Dev\OppnGL\build\x64-debug\CMakeFiles\OppnGL.dir\CXXDependInfo.json
+build CMakeFiles\OppnGL.dir\CXX.dd | CMakeFiles\OppnGL.dir\CXXModules.json CMakeFiles\OppnGL.dir\src\main.cpp.obj.modmap: CXX_DYNDEP__OppnGL_Release CMakeFiles\OppnGL.dir\src\main.cpp.obj.ddi | C$:\Dev\OppnGL\build\x64-release\CMakeFiles\OppnGL.dir\CXXDependInfo.json
 
 
 # =============================================================================
@@ -77,21 +77,21 @@ build CMakeFiles\OppnGL.dir\CXX.dd | CMakeFiles\OppnGL.dir\CXXModules.json CMake
 
 
 #############################################
-# Link the executable C:\Dev\OppnGL\bin\Debug\OppnGL.exe
+# Link the executable C:\Dev\OppnGL\bin\Release\OppnGL.exe
 
-build C$:\Dev\OppnGL\bin\Debug\OppnGL.exe: CXX_EXECUTABLE_LINKER__OppnGL_Debug CMakeFiles\OppnGL.dir\src\main.cpp.obj
-  CONFIG = Debug
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od -MDd -RTC1 -Zi
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+build C$:\Dev\OppnGL\bin\Release\OppnGL.exe: CXX_EXECUTABLE_LINKER__OppnGL_Release CMakeFiles\OppnGL.dir\src\main.cpp.obj
+  CONFIG = Release
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD
+  LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = glfw3.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   LINK_PATH = -LIBPATH:C:\Dev\OppnGL\Dependencies\GLFW\lib-vc2022
   OBJECT_DIR = CMakeFiles\OppnGL.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = CMakeFiles\OppnGL.dir\
-  TARGET_FILE = C:\Dev\OppnGL\bin\Debug\OppnGL.exe
+  TARGET_FILE = C:\Dev\OppnGL\bin\Release\OppnGL.exe
   TARGET_IMPLIB = OppnGL.lib
-  TARGET_PDB = C:\Dev\OppnGL\bin\Debug\OppnGL.pdb
+  TARGET_PDB = C:\Dev\OppnGL\bin\Release\OppnGL.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\OppnGL.dir
 
 
@@ -99,7 +99,7 @@ build C$:\Dev\OppnGL\bin\Debug\OppnGL.exe: CXX_EXECUTABLE_LINKER__OppnGL_Debug C
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Dev\OppnGL\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Dev\OppnGL\build\x64-release && "C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -110,7 +110,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Dev\OppnGL\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Dev\OppnGL -BC:\Dev\OppnGL\build\x64-debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Dev\OppnGL\build\x64-release && "C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Dev\OppnGL -BC:\Dev\OppnGL\build\x64-release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -120,9 +120,9 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build OppnGL: phony C$:\Dev\OppnGL\bin\Debug\OppnGL.exe
+build OppnGL: phony C$:\Dev\OppnGL\bin\Release\OppnGL.exe
 
-build OppnGL.exe: phony C$:\Dev\OppnGL\bin\Debug\OppnGL.exe
+build OppnGL.exe: phony C$:\Dev\OppnGL\bin\Release\OppnGL.exe
 
 # =============================================================================
 # Folder targets.
@@ -130,16 +130,16 @@ build OppnGL.exe: phony C$:\Dev\OppnGL\bin\Debug\OppnGL.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Dev/OppnGL/build/x64-debug
+# Folder: C:/Dev/OppnGL/build/x64-release
 
 build codegen: phony
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Dev/OppnGL/build/x64-debug
+# Folder: C:/Dev/OppnGL/build/x64-release
 
-build all: phony C$:\Dev\OppnGL\bin\Debug\OppnGL.exe
+build all: phony C$:\Dev\OppnGL\bin\Release\OppnGL.exe
 
 # =============================================================================
 # Built-in targets
@@ -148,7 +148,7 @@ build all: phony C$:\Dev\OppnGL\bin\Debug\OppnGL.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:\Dev\OppnGL\build\x64-debug\cmake_install.cmake: RERUN_CMAKE | C$:\Dev\OppnGL\CMakeLists.txt C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\4.3.1-msvc1\CMakeCXXCompiler.cmake CMakeFiles\4.3.1-msvc1\CMakeRCCompiler.cmake CMakeFiles\4.3.1-msvc1\CMakeSystem.cmake
+build build.ninja C$:\Dev\OppnGL\build\x64-release\cmake_install.cmake: RERUN_CMAKE | C$:\Dev\OppnGL\CMakeLists.txt C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\4.3.1-msvc1\CMakeCXXCompiler.cmake CMakeFiles\4.3.1-msvc1\CMakeRCCompiler.cmake CMakeFiles\4.3.1-msvc1\CMakeSystem.cmake
   pool = console
 
 

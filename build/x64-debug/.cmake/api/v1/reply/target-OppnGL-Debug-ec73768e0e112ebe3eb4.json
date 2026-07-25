@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/Dev/OppnGL/bin/OppnGL.exe"
+			"path" : "C:/Dev/OppnGL/bin/Debug/OppnGL.exe"
 		},
 		{
-			"path" : "C:/Dev/OppnGL/bin/OppnGL.pdb"
+			"path" : "C:/Dev/OppnGL/bin/Debug/OppnGL.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -118,27 +118,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "winmm.lib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "gdi32.lib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
 				"fragment" : "opengl32.lib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "user32.lib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "shell32.lib",
 				"role" : "libraries"
 			},
 			{
@@ -156,23 +136,7 @@
 		},
 		{
 			"backtrace" : 3,
-			"fragment" : "winmm"
-		},
-		{
-			"backtrace" : 3,
-			"fragment" : "gdi32"
-		},
-		{
-			"backtrace" : 3,
 			"fragment" : "opengl32"
-		},
-		{
-			"backtrace" : 3,
-			"fragment" : "user32"
-		},
-		{
-			"backtrace" : 3,
-			"fragment" : "shell32"
 		}
 	],
 	"name" : "OppnGL",

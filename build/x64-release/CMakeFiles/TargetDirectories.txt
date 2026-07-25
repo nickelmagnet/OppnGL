@@ -1,0 +1,3 @@
+C:/Dev/OppnGL/build/x64-release/CMakeFiles/OppnGL.dir
+C:/Dev/OppnGL/build/x64-release/CMakeFiles/edit_cache.dir
+C:/Dev/OppnGL/build/x64-release/CMakeFiles/rebuild_cache.dir

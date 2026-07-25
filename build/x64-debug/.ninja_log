@@ -1,7 +1,12 @@
 # ninja log v7
-7	197	8061486211214611	CMakeFiles/OppnGL.dir/src/main.cpp.obj.ddi	899f156afa2ae986
-199	304	8061486214075526	CMakeFiles/OppnGL.dir/CXX.dd	f321f53ab4aa9e72
-199	304	8061486214075526	CMakeFiles/OppnGL.dir/CXXModules.json	f321f53ab4aa9e72
-199	304	8061486214075526	CMakeFiles/OppnGL.dir/src/main.cpp.obj.modmap	f321f53ab4aa9e72
-322	1091	8061486214364912	CMakeFiles/OppnGL.dir/src/main.cpp.obj	8c7f659f6e84c09b
-1091	1537	8061486222052004	C:/Dev/OppnGL/bin/OppnGL.exe	6a90444ae1c36556
+43	117	8066768548380273	CMakeFiles/OppnGL.dir/src/main.cpp.obj.ddi	899f156afa2ae986
+118	157	8066768549127990	CMakeFiles/OppnGL.dir/CXX.dd	f321f53ab4aa9e72
+118	157	8066768549127990	CMakeFiles/OppnGL.dir/CXXModules.json	f321f53ab4aa9e72
+118	157	8066768549127990	CMakeFiles/OppnGL.dir/src/main.cpp.obj.modmap	f321f53ab4aa9e72
+159	231	8066768549540942	CMakeFiles/OppnGL.dir/src/main.cpp.obj	8c7f659f6e84c09b
+24	93	8066840971340457	CMakeFiles/OppnGL.dir/src/main.cpp.obj.ddi	899f156afa2ae986
+94	133	8066840972028690	CMakeFiles/OppnGL.dir/CXX.dd	f321f53ab4aa9e72
+94	133	8066840972028690	CMakeFiles/OppnGL.dir/CXXModules.json	f321f53ab4aa9e72
+94	133	8066840972028690	CMakeFiles/OppnGL.dir/src/main.cpp.obj.modmap	f321f53ab4aa9e72
+142	217	8066840972517579	CMakeFiles/OppnGL.dir/src/main.cpp.obj	8c7f659f6e84c09b
+217	447	8066840973271102	C:/Dev/OppnGL/bin/Debug/OppnGL.exe	6ae0396ca857fc85
