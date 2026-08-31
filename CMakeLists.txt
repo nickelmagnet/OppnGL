@@ -28,4 +28,14 @@ target_link_libraries(OppnGL PRIVATE
 	glew32s
 )
 
-target_compile_definitions(OppnGL PRIVATE GLEW_STATIC)
+target_compile_definitions(OppnGL PRIVATE
+	GLEW_STATIC
+)
+
+# A helper for my sanity
+add_custom_command(TARGET OppnGL POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_CURRENT_SOURCE_DIR}/res"
+        "$<TARGET_FILE_DIR:OppnGL>/res"
+)
+
