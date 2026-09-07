@@ -8,12 +8,15 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
 
 add_executable(OppnGL
 	src/main.cpp
-
+	src/renderer.cpp
+	src/vertexbuffer.cpp
+	src/indexbuffer.cpp
 )
 
 target_include_directories(OppnGL PRIVATE
 	"${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/GLFW/include"
 	"${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/GLEW/include"
+	"${CMAKE_CURRENT_SOURCE_DIR}/include"
 
 )
 
