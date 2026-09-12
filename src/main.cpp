@@ -5,6 +5,7 @@
 #include "renderer.h"
 #include "indexbuffer.h"
 #include "vertexbuffer.h"
+#include "vertexbufferlayout.h"
 #include "vertexarray.h"
 #include "shader.h"
 
@@ -62,19 +63,16 @@ int main() {
 	ib.Unbind();
 	shader.Unbind();
 
+	Renderer renderer;
+
 	float r = 0,g=1.0f,b=0.5f;
 	float incr = 0.05f,incb = 0.05f,incg = -0.05f;
 
 	while (!glfwWindowShouldClose(window)) {
-		GLCall(glClear(GL_COLOR_BUFFER_BIT));
-
+		renderer.Clear();
 		shader.Bind();
 		shader.SetUniform4f("u_Color", r, g, b, 1.0f);
-		
-		va.Bind();
-		ib.Bind();
-
-		GLCall(glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr));
+		renderer.Draw(va, ib, shader);
 
 		r += incr;
 		g += incg;
