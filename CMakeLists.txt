@@ -12,6 +12,7 @@ add_executable(OppnGL
 	src/vertexbuffer.cpp
 	src/vertexarray.cpp
 	src/indexbuffer.cpp
+	src/shader.cpp
 )
 
 target_include_directories(OppnGL PRIVATE
