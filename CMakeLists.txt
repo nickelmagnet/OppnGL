@@ -10,6 +10,7 @@ add_executable(OppnGL
 	src/main.cpp
 	src/renderer.cpp
 	src/vertexbuffer.cpp
+	src/vertexarray.cpp
 	src/indexbuffer.cpp
 )
 
