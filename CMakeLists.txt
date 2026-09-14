@@ -13,6 +13,8 @@ add_executable(OppnGL
 	src/vertexarray.cpp
 	src/indexbuffer.cpp
 	src/shader.cpp
+	src/vendor/stb_image/stb_image.cpp
+	src/texture.cpp
 )
 
 target_include_directories(OppnGL PRIVATE
