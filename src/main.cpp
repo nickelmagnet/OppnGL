@@ -8,6 +8,7 @@
 #include "vertexbufferlayout.h"
 #include "vertexarray.h"
 #include "shader.h"
+#include "texture.h"
 
 int main() {
 	if (!glfwInit()) {
@@ -32,63 +33,68 @@ int main() {
 	}
 
 	std::cout << glGetString(GL_VERSION) << std::endl;
+	{
+		float positions[] = {
+			-0.5f, -0.5f, 0.0f, 0.0f,
+			 0.5f, -0.5f, 1.0f, 0.0f,
+			 0.5f,  0.5f, 1.0f, 1.0f,
+			-0.5f,  0.5f, 0.0f, 1.0f
+		};
 
-	float positions[] = {
-		-0.5f, -0.5f,
-		 0.5f, -0.5f,
-		 0.5f,  0.5f,
-		-0.5f,  0.5f,
-	};
+		unsigned int indices[] = {
+			0,1,2,
+			2,3,0,
+		};
 
-	unsigned int indices[] = {
-		0,1,2,
-		2,3,0,
-	};
+		VertexArray va;
+		VertexBuffer vb(positions, 4 * 4 * sizeof(float));
+		VertexBufferLayout layout;
+		layout.push<float>(2);
+		layout.push<float>(2);
+		va.AddBuffer(vb, layout);
 
-	VertexArray va;
-	VertexBuffer vb(positions, 4 * 2 * sizeof(float));
-	VertexBufferLayout layout;
-	layout.push<float>(2);
-	va.AddBuffer(vb, layout);
+		IndexBuffer ib(indices, 6);
 
-	IndexBuffer ib(indices, 6);
-
-	Shader shader("res/shaders/basic.shader");
-	shader.Bind();
-
-	shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
-
-	va.Unbind();
-	vb.Unbind();
-	ib.Unbind();
-	shader.Unbind();
-
-	Renderer renderer;
-
-	float r = 0,g=1.0f,b=0.5f;
-	float incr = 0.05f,incb = 0.05f,incg = -0.05f;
-
-	while (!glfwWindowShouldClose(window)) {
-		renderer.Clear();
+		Shader shader("res/shaders/basic.shader");
 		shader.Bind();
-		shader.SetUniform4f("u_Color", r, g, b, 1.0f);
-		renderer.Draw(va, ib, shader);
 
-		r += incr;
-		g += incg;
-		b += incb;
-		if (r >= 1.0f || r <= 0.0f) {
-			incr = -incr;
-		}
-		if (g >= 1.0f || g <= 0.0f) {
-			incg = -incg;
-		}
-		if (b >= 1.0f || b <= 0.0f) {
-			incb = -incb;
-		}
+		shader.SetUniform4f("u_Color", 0.2f, 0.3f, 0.8f, 1.0f);
+		Texture texture("res/textures/fun.png");
+		texture.Bind();
+		shader.SetUniform1i("u_Texture", 0);
 
-		glfwSwapBuffers(window);
-		glfwPollEvents();
+		va.Unbind();
+		vb.Unbind();
+		ib.Unbind();
+		shader.Unbind();
+
+		Renderer renderer;
+
+		float r = 0, g = 1.0f, b = 0.5f;
+		float incr = 0.05f, incb = 0.05f, incg = -0.05f;
+
+		while (!glfwWindowShouldClose(window)) {
+			renderer.Clear();
+			shader.Bind();
+			shader.SetUniform4f("u_Color", r, g, b, 1.0f);
+			renderer.Draw(va, ib, shader);
+
+			r += incr;
+			g += incg;
+			b += incb;
+			if (r >= 1.0f || r <= 0.0f) {
+				incr = -incr;
+			}
+			if (g >= 1.0f || g <= 0.0f) {
+				incg = -incg;
+			}
+			if (b >= 1.0f || b <= 0.0f) {
+				incb = -incb;
+			}
+
+			glfwSwapBuffers(window);
+			glfwPollEvents();
+		}
 	}
 	glfwDestroyWindow(window);
 	glfwTerminate();
