@@ -6,21 +6,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
 
-add_executable(OppnGL
-	src/main.cpp
-	src/renderer.cpp
-	src/vertexbuffer.cpp
-	src/vertexarray.cpp
-	src/indexbuffer.cpp
-	src/shader.cpp
-	src/vendor/stb_image/stb_image.cpp
-	src/texture.cpp
+file(GLOB_RECURSE SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"
 )
+
+add_executable(OppnGL ${SOURCES})
 
 target_include_directories(OppnGL PRIVATE
 	"${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/GLFW/include"
 	"${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/GLEW/include"
 	"${CMAKE_CURRENT_SOURCE_DIR}/include"
+	"${CMAKE_CURRENT_SOURCE_DIR}/src/vendor"
 
 )
 
