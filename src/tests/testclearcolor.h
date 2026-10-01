@@ -3,11 +3,11 @@
 #include "test.h"
 
 namespace test {
-	class TestTexture2D : public Test
+	class TestClearColor : public Test
 	{
 	public:
-		TestTexture2D();
-		~TestTexture2D();
+		TestClearColor();
+		~TestClearColor();
 		void OnUpdate(float deltaTime) override;
 		void OnRender() override;
 		void OnImGuiRender() override;

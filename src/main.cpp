@@ -18,6 +18,7 @@
 #include "imgui/imgui_impl_opengl3.h"
 
 #include "tests/testclearcolor.h"
+#include "tests/testtexture2D.h"
 
 int main() {
 	if (!glfwInit()) {
@@ -59,7 +60,8 @@ int main() {
 		test::TestMenu* testMenu = new test::TestMenu(currentTest);
 		currentTest = testMenu;
 
-		testMenu->RegisterTest<test::TestTexture2D>("Clear Color");
+		testMenu->RegisterTest<test::TestClearColor>("Clear Color");
+		testMenu->RegisterTest<test::TestTexture2D>("2D Texture");
 
 		while (!glfwWindowShouldClose(window)) {
 			renderer.SetClearColor(0.5f, 0.5f, 1.0f, 1.0f);

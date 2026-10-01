@@ -3,26 +3,26 @@
 #include "imgui/imgui.h"
 
 namespace test {
-	TestTexture2D::TestTexture2D()
+	TestClearColor::TestClearColor()
 		: m_ClearColor{ 0.1f, 0.2f, 0.8f, 1.0f }
 	{
 	}
 
-	TestTexture2D::~TestTexture2D()
+	TestClearColor::~TestClearColor()
 	{
 	}
 
-	void TestTexture2D::OnUpdate(float deltaTime)
+	void TestClearColor::OnUpdate(float deltaTime)
 	{
 	}
 
-	void TestTexture2D::OnRender()
+	void TestClearColor::OnRender()
 	{
 		glClearColor(m_ClearColor[0], m_ClearColor[1], m_ClearColor[2], m_ClearColor[3]);
 		glClear(GL_COLOR_BUFFER_BIT);
 	}
 	
-	void TestTexture2D::OnImGuiRender()
+	void TestClearColor::OnImGuiRender()
 	{
 		ImGui::ColorEdit4("Clear Color", m_ClearColor);
 	}
