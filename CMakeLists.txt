@@ -17,6 +17,7 @@ target_include_directories(OppnGL PRIVATE
 	"${CMAKE_CURRENT_SOURCE_DIR}/Dependencies/GLEW/include"
 	"${CMAKE_CURRENT_SOURCE_DIR}/include"
 	"${CMAKE_CURRENT_SOURCE_DIR}/src/vendor"
+	"${CMAKE_CURRENT_SOURCE_DIR}/src/tests"
 
 )
 
@@ -35,7 +36,7 @@ target_compile_definitions(OppnGL PRIVATE
 	GLEW_STATIC
 )
 
-# A helper for my sanity
+# A helper command
 add_custom_command(TARGET OppnGL POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${CMAKE_CURRENT_SOURCE_DIR}/res"
