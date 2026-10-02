@@ -1,6 +1,6 @@
 # OppnGL
 
-A learning project for modern OpenGL in C++, built with CMake . It's my sandbox for working through the graphics pipeline and understanding what each layer (textures, shaders, blending, uniforms) means and how it connects.
+A small OpenGL renderer with a pile of ( 2 ) test scenes on top. Made to learn how the pieces fit together.
 
 ## Tech
 
@@ -24,6 +24,7 @@ OppnGL/
 ```
 
 The executable ends up in `bin/<Debug|Release>/OppnGL.exe`.
+It is basically a decent template with few abstractions and a decent test framework 
 
 ## Screenshots
 
@@ -32,7 +33,3 @@ The executable ends up in `bin/<Debug|Release>/OppnGL.exe`.
   <img src="screenshots/2DTexture.png" width="49%">
 </p>
 
-
-## License
-
-Do whatever you want!
